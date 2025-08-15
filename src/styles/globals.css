@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+/* VS Code Theme Colors */
+:root {
+  --vscode-bg: #1e1e1e;
+  --vscode-sidebar-bg: #252526;
+  --vscode-header-bg: #2d2d30;
+  --vscode-statusbar-bg: #0078d4;
+  --vscode-text: #d4d4d4;
+  --vscode-text-secondary: #969696;
+  --vscode-border: #3e3e42;
+  --vscode-accent: #0078d4;
+  --vscode-selection: #264f78;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vscode-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
