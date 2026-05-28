@@ -276,10 +276,6 @@
 
 @media (max-width: 920px) {
   .workspace {
-    grid-template-columns: 48px 1fr;
-  }
-
-  .explorer {
-    display: none;
+    grid-template-columns: 48px 200px 1fr;
   }
 }
