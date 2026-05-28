@@ -1,0 +1,236 @@
+.shell {
+  --vscode-bg: #1e1e1e;
+  --vscode-panel: #252526;
+  --vscode-border: #2d2d2d;
+  --vscode-foreground: #d4d4d4;
+  --vscode-muted: #9aa0a6;
+  --vscode-accent: #007acc;
+  --vscode-tab: #2d2d2d;
+  --vscode-tab-active: #1e1e1e;
+  --vscode-status: #007acc;
+
+  height: 100svh;
+  background: var(--vscode-bg);
+  color: var(--vscode-foreground);
+  display: grid;
+  grid-template-rows: 32px 1fr 22px;
+  font-family: var(--font-geist-sans);
+}
+
+.titleBar {
+  background: var(--vscode-panel);
+  border-bottom: 1px solid var(--vscode-border);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 12px;
+  user-select: none;
+}
+
+.titleText {
+  margin: 0 auto;
+  color: var(--vscode-muted);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 48px 240px 1fr;
+  min-height: 0;
+}
+
+.activityBar {
+  background: #333333;
+  border-right: 1px solid var(--vscode-border);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  gap: 8px;
+  align-items: center;
+  user-select: none;
+}
+
+.activityIcon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  color: var(--vscode-muted);
+  font-size: 14px;
+}
+
+.activityIconActive {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--vscode-foreground);
+}
+
+.explorer {
+  background: var(--vscode-panel);
+  border-right: 1px solid var(--vscode-border);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.explorerHeader {
+  padding: 10px 12px 8px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--vscode-muted);
+  border-bottom: 1px solid var(--vscode-border);
+}
+
+.fileList {
+  padding: 6px;
+  overflow: auto;
+}
+
+.fileLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--vscode-foreground);
+}
+
+.fileLink:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.fileLinkActive {
+  background: rgba(0, 122, 204, 0.22);
+  outline: 1px solid rgba(0, 122, 204, 0.32);
+}
+
+.fileExt {
+  color: var(--vscode-muted);
+  font-size: 12px;
+}
+
+.editor {
+  display: grid;
+  grid-template-rows: 36px 1fr;
+  min-width: 0;
+  min-height: 0;
+}
+
+.tabs {
+  background: #252526;
+  border-bottom: 1px solid var(--vscode-border);
+  display: flex;
+  overflow: auto;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  font-size: 13px;
+  color: var(--vscode-muted);
+  border-right: 1px solid var(--vscode-border);
+  background: var(--vscode-tab);
+  height: 100%;
+  white-space: nowrap;
+}
+
+.tabActive {
+  color: var(--vscode-foreground);
+  background: var(--vscode-tab-active);
+  border-top: 2px solid var(--vscode-accent);
+  padding-top: 2px;
+}
+
+.tab:hover {
+  color: var(--vscode-foreground);
+}
+
+.editorPane {
+  background: var(--vscode-bg);
+  overflow: auto;
+  padding: 22px 24px;
+}
+
+.content {
+  max-width: 980px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.content h1 {
+  font-size: 28px;
+  margin: 0 0 16px;
+}
+
+.content h2 {
+  font-size: 18px;
+  margin: 22px 0 10px;
+}
+
+.content h3 {
+  font-size: 15px;
+  margin: 16px 0 8px;
+  color: var(--vscode-foreground);
+}
+
+.content p,
+.content li {
+  color: var(--vscode-foreground);
+}
+
+.content a {
+  color: #4fc1ff;
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+.content ul {
+  padding-left: 18px;
+}
+
+.content code {
+  font-family: var(--font-geist-mono);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.statusBar {
+  background: var(--vscode-status);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-size: 12px;
+  user-select: none;
+}
+
+.statusLeft,
+.statusRight {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.statusPill {
+  padding: 0 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.16);
+}
+
+@media (max-width: 920px) {
+  .workspace {
+    grid-template-columns: 48px 1fr;
+  }
+
+  .explorer {
+    display: none;
+  }
+}
+
