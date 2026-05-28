@@ -201,6 +201,15 @@
   border-radius: 6px;
 }
 
+.content iframe {
+  width: 100%;
+  height: 80svh;
+  border: 1px solid var(--vscode-border);
+  border-radius: 10px;
+  background: #ffffff;
+  margin-top: 14px;
+}
+
 .statusBar {
   background: var(--vscode-status);
   display: flex;
@@ -233,4 +242,3 @@
     display: none;
   }
 }
-
